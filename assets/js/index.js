@@ -4,6 +4,8 @@ document.querySelector("#main-image").addEventListener("click", function () {
 })
 
 
+
+
 document.querySelector("#boton").addEventListener("click", function () {
     document.querySelector("#boton").classList.toggle("boton-bgColor");
 })
@@ -15,6 +17,7 @@ let navi = document.querySelector("#navi");
 let faze = document.querySelector("#faze");
 let g2 = document.querySelector("#g2");
 let boton = document.querySelector("#boton2");
+let text = document.querySelector("#sticker-text");
 
 function calcular() {
     let navi = parseInt(document.querySelector("#navi").value ? document.querySelector("#navi").value : 0);
@@ -24,11 +27,11 @@ function calcular() {
     let resultado = navi + faze + g2;
 
     if (resultado > 10) {
-        alert("te salio un total de: " + resultado + " stickers, solo puedes llevar 10 en total");
+        text.innerHTML = `tienes la cantidad de ${resultado} stickers, llevas demasioados`;
     }
 
     if (resultado < 10) {
-        alert("llevas un total de: " + resultado + " stickers, excelente compra");
+        text.innerHTML = `tienes la cantidad de ${resultado} stickers`;
     }
 }
 
@@ -40,6 +43,7 @@ function clave() {
     let selectOne = document.querySelector("#selectOne");
     let selectTwo = document.querySelector("#selectTwo");
     let selectTre = document.querySelector("#selectTre");
+    let passwordText = document.querySelector("#text-password")
 
     const passwordOne = "911";
     const PasswordTwo = "714";
@@ -48,13 +52,13 @@ function clave() {
     console.log(valor);
 
     if (valor === passwordOne) {
-        alert("password 1 es correcta");
+        passwordText.innerHTML = "Password 1 ingresada correctamente";
     }
 
-    if (valor === PasswordTwo) {
-        alert("password 2 es correcta");
+    else if (valor === PasswordTwo) {
+        passwordText.innerHTML = "Password 2 ingresada correctamente";
     } else {
-        alert("password no existente ");
+       passwordText.innerHTML = "password no existente";
     }
 
 /*------------------------------------------------------- */
