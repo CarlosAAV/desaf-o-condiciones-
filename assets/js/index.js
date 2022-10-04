@@ -30,7 +30,7 @@ function calcular() {
         text.innerHTML = `tienes la cantidad de ${resultado} stickers, llevas demasioados`;
     }
 
-    if (resultado < 10) {
+    if (resultado <= 10) {
         text.innerHTML = `tienes la cantidad de ${resultado} stickers`;
     }
 }
